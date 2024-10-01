@@ -1,0 +1,84 @@
+/**
+ * @fileoverview Root layout component for the Ask*Atlas application.
+ * @module layout
+ */
+
+import { Inter } from "next/font/google";
+import "./globals.css";
+
+/**
+ * Inter font configuration.
+ * @type {Object}
+ */
+const inter = Inter({ subsets: ["latin"] });
+
+/**
+ * Metadata for the website.
+ * @type {Object}
+ * @property {string} title - The title of the website.
+ * @property {string} description - The description of the website.
+ */
+export const metadata = {
+  title: "Turing's Test",
+  description: "The sage for the Turing's Test.",
+};
+
+/**
+ * Root layout component.
+ * @param {Object} props - The component props.
+ * @param {ReactNode} props.children - The child components.
+ * @returns {JSX.Element} The rendered root layout component.
+ */
+export default function RootLayout({ children }) {
+  return (
+    <html lang="en">
+      <body className={inter.className}>
+        {children}
+
+        <>
+          <meta httpEquiv="Content-Type" content="text/html; charset=UTF-8" />
+          <title>Turing's Test</title>
+
+          {/* All the metadata about the website */}
+          <meta name="apple-mobile-web-app-capable" content="yes" />
+          <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+          />          
+          <meta name="author" content="Alex Gijo" />
+          <meta
+            name="description"
+            content="The sage for the Turing's Test."
+          />
+          <meta name="keywords" content="parallax,javascript,jquery,zepto,plugin,enigma" />
+          <meta
+            property="og:description"
+            content="The sage for the Turing's Test."
+          />
+          <meta
+            property="og:image"
+            content="https://i.imgur.com/ryP4th6.png"
+          />
+          <meta property="og:site_name" content="Turing's Test" />
+          <meta property="og:title" content="Turing's Test" />
+          <meta property="og:type" content="website" />
+          
+         {/* Styling imports */}
+          <link rel="stylesheet" type="text/css" href="/assets/styles.css" />
+          <style
+            type="text/css"
+            data-fbcssmodules="css:fb.css.base css:fb.css.dialog css:fb.css.iframewidget css:fb.css.customer_chat_plugin_iframe"
+            dangerouslySetInnerHTML={{
+              __html:
+                "\n\t\t.fb_hidden {\n\t\t\tposition: absolute;\n\t\t\ttop: -10000px;\n\t\t\tz-index: 10001\n\t\t}\n\n\t\t.fb_reposition {\n\t\t\toverflow: hidden;\n\t\t\tposition: relative\n\t\t}\n\n\t\t.fb_invisible {\n\t\t\tdisplay: none\n\t\t}\n\n\t\t.fb_reset {\n\t\t\tbackground: none;\n\t\t\tborder: 0;\n\t\t\tborder-spacing: 0;\n\t\t\tcolor: #000;\n\t\t\tcursor: auto;\n\t\t\tdirection: ltr;\n\t\t\tfont-family: 'lucida grande', tahoma, verdana, arial, sans-serif;\n\t\t\tfont-size: 11px;\n\t\t\tfont-style: normal;\n\t\t\tfont-variant: normal;\n\t\t\tfont-weight: normal;\n\t\t\tletter-spacing: normal;\n\t\t\tline-height: 1;\n\t\t\tmargin: 0;\n\t\t\toverflow: visible;\n\t\t\tpadding: 0;\n\t\t\ttext-align: left;\n\t\t\ttext-decoration: none;\n\t\t\ttext-indent: 0;\n\t\t\ttext-shadow: none;\n\t\t\ttext-transform: none;\n\t\t\tvisibility: visible;\n\t\t\twhite-space: normal;\n\t\t\tword-spacing: normal\n\t\t}\n\n\t\t.fb_reset>div {\n\t\t\toverflow: hidden\n\t\t}\n\n\t\t@keyframes fb_transform {\n\t\t\tfrom {\n\t\t\t\topacity: 0;\n\t\t\t\ttransform: scale(.95)\n\t\t\t}\n\n\t\t\tto {\n\t\t\t\topacity: 1;\n\t\t\t\ttransform: scale(1)\n\t\t\t}\n\t\t}\n\n\t\t.fb_animate {\n\t\t\tanimation: fb_transform .3s forwards\n\t\t}\n\n\t\t.fb_hidden {\n\t\t\tposition: absolute;\n\t\t\ttop: -10000px;\n\t\t\tz-index: 10001\n\t\t}\n\n\t\t.fb_reposition {\n\t\t\toverflow: hidden;\n\t\t\tposition: relative\n\t\t}\n\n\t\t.fb_invisible {\n\t\t\tdisplay: none\n\t\t}\n\n\t\t.fb_reset {\n\t\t\tbackground: none;\n\t\t\tborder: 0;\n\t\t\tborder-spacing: 0;\n\t\t\tcolor: #000;\n\t\t\tcursor: auto;\n\t\t\tdirection: ltr;\n\t\t\tfont-family: 'lucida grande', tahoma, verdana, arial, sans-serif;\n\t\t\tfont-size: 11px;\n\t\t\tfont-style: normal;\n\t\t\tfont-variant: normal;\n\t\t\tfont-weight: normal;\n\t\t\tletter-spacing: normal;\n\t\t\tline-height: 1;\n\t\t\tmargin: 0;\n\t\t\toverflow: visible;\n\t\t\tpadding: 0;\n\t\t\ttext-align: left;\n\t\t\ttext-decoration: none;\n\t\t\ttext-indent: 0;\n\t\t\ttext-shadow: none;\n\t\t\ttext-transform: none;\n\t\t\tvisibility: visible;\n\t\t\twhite-space: normal;\n\t\t\tword-spacing: normal\n\t\t}\n\n\t\t.fb_reset>div {\n\t\t\toverflow: hidden\n\t\t}\n\n\t\t@keyframes fb_transform {\n\t\t\tfrom {\n\t\t\t\topacity: 0;\n\t\t\t\ttransform: scale(.95)\n\t\t\t}\n\n\t\t\tto {\n\t\t\t\topacity: 1;\n\t\t\t\ttransform: scale(1)\n\t\t\t}\n\t\t}\n\n\t\t.fb_animate {\n\t\t\tanimation: fb_transform .3s forwards\n\t\t}\n\n\t\t.fb_dialog {\n\t\t\tbackground: rgba(82, 82, 82, .7);\n\t\t\tposition: absolute;\n\t\t\ttop: -10000px;\n\t\t\tz-index: 10001\n\t\t}\n\n\t\t.fb_dialog_advanced {\n\t\t\tborder-radius: 8px;\n\t\t\tpadding: 10px\n\t\t}\n\n\t\t.fb_dialog_content {\n\t\t\tbackground: #fff;\n\t\t\tcolor: #373737\n\t\t}\n\n\t\t.fb_dialog_close_icon {\n\t\t\tbackground: url(https://connect.facebook.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;\n\t\t\tcursor: pointer;\n\t\t\tdisplay: block;\n\t\t\theight: 15px;\n\t\t\tposition: absolute;\n\t\t\tright: 18px;\n\t\t\ttop: 17px;\n\t\t\twidth: 15px\n\t\t}\n\n\t\t.fb_dialog_mobile .fb_dialog_close_icon {\n\t\t\tleft: 5px;\n\t\t\tright: auto;\n\t\t\ttop: 5px\n\t\t}\n\n\t\t.fb_dialog_padding {\n\t\t\tbackground-color: transparent;\n\t\t\tposition: absolute;\n\t\t\twidth: 1px;\n\t\t\tz-index: -1\n\t\t}\n\n\t\t.fb_dialog_close_icon:hover {\n\t\t\tbackground: url(https://connect.facebook.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent\n\t\t}\n\n\t\t.fb_dialog_close_icon:active {\n\t\t\tbackground: url(https://connect.facebook.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent\n\t\t}\n\n\t\t.fb_dialog_iframe {\n\t\t\tline-height: 0\n\t\t}\n\n\t\t.fb_dialog_content .dialog_title {\n\t\t\tbackground: #6d84b4;\n\t\t\tborder: 1px solid #365899;\n\t\t\tcolor: #fff;\n\t\t\tfont-size: 14px;\n\t\t\tfont-weight: bold;\n\t\t\tmargin: 0\n\t\t}\n\n\t\t.fb_dialog_content .dialog_title>span {\n\t\t\tbackground: url(https://connect.facebook.net/rsrc.php/v3/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;\n\t\t\tfloat: left;\n\t\t\tpadding: 5px 0 7px 26px\n\t\t}\n\n\t\tbody.fb_hidden {\n\t\t\theight: 100%;\n\t\t\tleft: 0;\n\t\t\tmargin: 0;\n\t\t\toverflow: visible;\n\t\t\tposition: absolute;\n\t\t\ttop: -10000px;\n\t\t\ttransform: none;\n\t\t\twidth: 100%\n\t\t}\n\n\t\t.fb_dialog.fb_dialog_mobile.loading {\n\t\t\tbackground: url(https://connect.facebook.net/rsrc.php/v3/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;\n\t\t\tmin-height: 100%;\n\t\t\tmin-width: 100%;\n\t\t\toverflow: hidden;\n\t\t\tposition: absolute;\n\t\t\ttop: 0;\n\t\t\tz-index: 10001\n\t\t}\n\n\t\t.fb_dialog.fb_dialog_mobile.loading.centered {\n\t\t\tbackground: none;\n\t\t\theight: auto;\n\t\t\tmin-height: initial;\n\t\t\tmin-width: initial;\n\t\t\twidth: auto\n\t\t}\n\n\t\t.fb_dialog.fb_dialog_mobile.loading.centered #fb_dialog_loader_spinner {\n\t\t\twidth: 100%\n\t\t}\n\n\t\t.fb_dialog.fb_dialog_mobile.loading.centered .fb_dialog_content {\n\t\t\tbackground: none\n\t\t}\n\n\t\t.loading.centered #fb_dialog_loader_close {\n\t\t\tclear: both;\n\t\t\tcolor: #fff;\n\t\t\tdisplay: block;\n\t\t\tfont-size: 18px;\n\t\t\tpadding-top: 20px\n\t\t}\n\n\t\t#fb-root #fb_dialog_ipad_overlay {\n\t\t\tbackground: rgba(0, 0, 0, .4);\n\t\t\tbottom: 0;\n\t\t\tleft: 0;\n\t\t\tmin-height: 100%;\n\t\t\tposition: absolute;\n\t\t\tright: 0;\n\t\t\ttop: 0;\n\t\t\twidth: 100%;\n\t\t\tz-index: 10000\n\t\t}\n\n\t\t#fb-root #fb_dialog_ipad_overlay.hidden {\n\t\t\tdisplay: none\n\t\t}\n\n\t\t.fb_dialog.fb_dialog_mobile.loading iframe {\n\t\t\tvisibility: hidden\n\t\t}\n\n\t\t.fb_dialog_mobile .fb_dialog_iframe {\n\t\t\tposition: sticky;\n\t\t\ttop: 0\n\t\t}\n\n\t\t.fb_dialog_content .dialog_header {\n\t\t\tbackground: linear-gradient(from(#738aba), to(#2c4987));\n\t\t\tborder-bottom: 1px solid;\n\t\t\tborder-color: #043b87;\n\t\t\tbox-shadow: white 0 1px 1px -1px inset;\n\t\t\tcolor: #fff;\n\t\t\tfont: bold 14px Helvetica, sans-serif;\n\t\t\ttext-overflow: ellipsis;\n\t\t\ttext-shadow: rgba(0, 30, 84, .296875) 0 -1px 0;\n\t\t\tvertical-align: middle;\n\t\t\twhite-space: nowrap\n\t\t}\n\n\t\t.fb_dialog_content .dialog_header table {\n\t\t\theight: 43px;\n\t\t\twidth: 100%\n\t\t}\n\n\t\t.fb_dialog_content .dialog_header td.header_left {\n\t\t\tfont-size: 12px;\n\t\t\tpadding-left: 5px;\n\t\t\tvertical-align: middle;\n\t\t\twidth: 60px\n\t\t}\n\n\t\t.fb_dialog_content .dialog_header td.header_right {\n\t\t\tfont-size: 12px;\n\t\t\tpadding-right: 5px;\n\t\t\tvertical-align: middle;\n\t\t\twidth: 60px\n\t\t}\n\n\t\t.fb_dialog_content .touchable_button {\n\t\t\tbackground: linear-gradient(from(#4267B2), to(#2a4887));\n\t\t\tbackground-clip: padding-box;\n\t\t\tborder: 1px solid #29487d;\n\t\t\tborder-radius: 3px;\n\t\t\tdisplay: inline-block;\n\t\t\tline-height: 18px;\n\t\t\tmargin-top: 3px;\n\t\t\tmax-width: 85px;\n\t\t\tpadding: 4px 12px;\n\t\t\tposition: relative\n\t\t}\n\n\t\t.fb_dialog_content .dialog_header .touchable_button input {\n\t\t\tbackground: none;\n\t\t\tborder: none;\n\t\t\tcolor: #fff;\n\t\t\tfont: bold 12px Helvetica, sans-serif;\n\t\t\tmargin: 2px -12px;\n\t\t\tpadding: 2px 6px 3px 6px;\n\t\t\ttext-shadow: rgba(0, 30, 84, .296875) 0 -1px 0\n\t\t}\n\n\t\t.fb_dialog_content .dialog_header .header_center {\n\t\t\tcolor: #fff;\n\t\t\tfont-size: 16px;\n\t\t\tfont-weight: bold;\n\t\t\tline-height: 18px;\n\t\t\ttext-align: center;\n\t\t\tvertical-align: middle\n\t\t}\n\n\t\t.fb_dialog_content .dialog_content {\n\t\t\tbackground: url(https://connect.facebook.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;\n\t\t\tborder: 1px solid #4a4a4a;\n\t\t\tborder-bottom: 0;\n\t\t\tborder-top: 0;\n\t\t\theight: 150px\n\t\t}\n\n\t\t.fb_dialog_content .dialog_footer {\n\t\t\tbackground: #f5f6f7;\n\t\t\tborder: 1px solid #4a4a4a;\n\t\t\tborder-top-color: #ccc;\n\t\t\theight: 40px\n\t\t}\n\n\t\t#fb_dialog_loader_close {\n\t\t\tfloat: left\n\t\t}\n\n\t\t.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon {\n\t\t\tvisibility: hidden\n\t\t}\n\n\t\t#fb_dialog_loader_spinner {\n\t\t\tanimation: rotateSpinner 1.2s linear infinite;\n\t\t\tbackground-color: transparent;\n\t\t\tbackground-image: url(https://connect.facebook.net/rsrc.php/v3/yD/r/t-wz8gw1xG1.png);\n\t\t\tbackground-position: 50% 50%;\n\t\t\tbackground-repeat: no-repeat;\n\t\t\theight: 24px;\n\t\t\twidth: 24px\n\t\t}\n\n\t\t@keyframes rotateSpinner {\n\t\t\t0% {\n\t\t\t\ttransform: rotate(0deg)\n\t\t\t}\n\n\t\t\t100% {\n\t\t\t\ttransform: rotate(360deg)\n\t\t\t}\n\t\t}\n\n\t\t.fb_iframe_widget {\n\t\t\tdisplay: inline-block;\n\t\t\tposition: relative\n\t\t}\n\n\t\t.fb_iframe_widget span {\n\t\t\tdisplay: inline-block;\n\t\t\tposition: relative;\n\t\t\ttext-align: justify\n\t\t}\n\n\t\t.fb_iframe_widget iframe {\n\t\t\tposition: absolute\n\t\t}\n\n\t\t.fb_iframe_widget_fluid_desktop,\n\t\t.fb_iframe_widget_fluid_desktop span,\n\t\t.fb_iframe_widget_fluid_desktop iframe {\n\t\t\tmax-width: 100%\n\t\t}\n\n\t\t.fb_iframe_widget_fluid_desktop iframe {\n\t\t\tmin-width: 220px;\n\t\t\tposition: relative\n\t\t}\n\n\t\t.fb_iframe_widget_lift {\n\t\t\tz-index: 1\n\t\t}\n\n\t\t.fb_iframe_widget_fluid {\n\t\t\tdisplay: inline\n\t\t}\n\n\t\t.fb_iframe_widget_fluid span {\n\t\t\twidth: 100%\n\t\t}\n\n\t\t.fb_mpn_mobile_landing_page_slide_out {\n\t\t\tanimation-duration: 200ms;\n\t\t\tanimation-name: fb_mpn_landing_page_slide_out;\n\t\t\ttransition-timing-function: ease-in\n\t\t}\n\n\t\t.fb_mpn_mobile_landing_page_slide_out_from_left {\n\t\t\tanimation-duration: 200ms;\n\t\t\tanimation-name: fb_mpn_landing_page_slide_out_from_left;\n\t\t\ttransition-timing-function: ease-in\n\t\t}\n\n\t\t.fb_mpn_mobile_landing_page_slide_up {\n\t\t\tanimation-duration: 500ms;\n\t\t\tanimation-name: fb_mpn_landing_page_slide_up;\n\t\t\ttransition-timing-function: ease-in\n\t\t}\n\n\t\t.fb_mpn_mobile_bounce_in {\n\t\t\tanimation-duration: 300ms;\n\t\t\tanimation-name: fb_mpn_bounce_in;\n\t\t\ttransition-timing-function: ease-in\n\t\t}\n\n\t\t.fb_mpn_mobile_bounce_out {\n\t\t\tanimation-duration: 300ms;\n\t\t\tanimation-name: fb_mpn_bounce_out;\n\t\t\ttransition-timing-function: ease-in\n\t\t}\n\n\t\t.fb_mpn_mobile_bounce_out_v2 {\n\t\t\tanimation-duration: 300ms;\n\t\t\tanimation-name: fb_mpn_fade_out;\n\t\t\ttransition-timing-function: ease-in\n\t\t}\n\n\t\t.fb_customer_chat_bounce_in_v2 {\n\t\t\tanimation-duration: 300ms;\n\t\t\tanimation-name: fb_bounce_in_v2;\n\t\t\ttransition-timing-function: ease-in\n\t\t}\n\n\t\t.fb_customer_chat_bounce_in_from_left {\n\t\t\tanimation-duration: 300ms;\n\t\t\tanimation-name: fb_bounce_in_from_left;\n\t\t\ttransition-timing-function: ease-in\n\t\t}\n\n\t\t.fb_customer_chat_bounce_out_v2 {\n\t\t\tanimation-duration: 300ms;\n\t\t\tanimation-name: fb_bounce_out_v2;\n\t\t\ttransition-timing-function: ease-in\n\t\t}\n\n\t\t.fb_customer_chat_bounce_out_from_left {\n\t\t\tanimation-duration: 300ms;\n\t\t\tanimation-name: fb_bounce_out_from_left;\n\t\t\ttransition-timing-function: ease-in\n\t\t}\n\n\t\t.fb_invisible_flow {\n\t\t\tdisplay: inherit;\n\t\t\theight: 0;\n\t\t\toverflow-x: hidden;\n\t\t\twidth: 0\n\t\t}\n\n\t\t@keyframes fb_mpn_landing_page_slide_out {\n\t\t\t0% {\n\t\t\t\tmargin: 0 12px;\n\t\t\t\twidth: 100% - 24px\n\t\t\t}\n\n\t\t\t60% {\n\t\t\t\tborder-radius: 18px\n\t\t\t}\n\n\t\t\t100% {\n\t\t\t\tborder-radius: 50%;\n\t\t\t\tmargin: 0 24px;\n\t\t\t\twidth: 60px\n\t\t\t}\n\t\t}\n\n\t\t@keyframes fb_mpn_landing_page_slide_out_from_left {\n\t\t\t0% {\n\t\t\t\tleft: 12px;\n\t\t\t\twidth: 100% - 24px\n\t\t\t}\n\n\t\t\t60% {\n\t\t\t\tborder-radius: 18px\n\t\t\t}\n\n\t\t\t100% {\n\t\t\t\tborder-radius: 50%;\n\t\t\t\tleft: 12px;\n\t\t\t\twidth: 60px\n\t\t\t}\n\t\t}\n\n\t\t@keyframes fb_mpn_landing_page_slide_up {\n\t\t\t0% {\n\t\t\t\tbottom: 0;\n\t\t\t\topacity: 0\n\t\t\t}\n\n\t\t\t100% {\n\t\t\t\tbottom: 24px;\n\t\t\t\topacity: 1\n\t\t\t}\n\t\t}\n\n\t\t@keyframes fb_mpn_bounce_in {\n\t\t\t0% {\n\t\t\t\topacity: .5;\n\t\t\t\ttop: 100%\n\t\t\t}\n\n\t\t\t100% {\n\t\t\t\topacity: 1;\n\t\t\t\ttop: 0\n\t\t\t}\n\t\t}\n\n\t\t@keyframes fb_mpn_fade_out {\n\t\t\t0% {\n\t\t\t\tbottom: 30px;\n\t\t\t\topacity: 1\n\t\t\t}\n\n\t\t\t100% {\n\t\t\t\tbottom: 0;\n\t\t\t\topacity: 0\n\t\t\t}\n\t\t}\n\n\t\t@keyframes fb_mpn_bounce_out {\n\t\t\t0% {\n\t\t\t\topacity: 1;\n\t\t\t\ttop: 0\n\t\t\t}\n\n\t\t\t100% {\n\t\t\t\topacity: .5;\n\t\t\t\ttop: 100%\n\t\t\t}\n\t\t}\n\n\t\t@keyframes fb_bounce_in_v2 {\n\t\t\t0% {\n\t\t\t\topacity: 0;\n\t\t\t\ttransform: scale(0, 0);\n\t\t\t\ttransform-origin: bottom right\n\t\t\t}\n\n\t\t\t50% {\n\t\t\t\ttransform: scale(1.03, 1.03);\n\t\t\t\ttransform-origin: bottom right\n\t\t\t}\n\n\t\t\t100% {\n\t\t\t\topacity: 1;\n\t\t\t\ttransform: scale(1, 1);\n\t\t\t\ttransform-origin: bottom right\n\t\t\t}\n\t\t}\n\n\t\t@keyframes fb_bounce_in_from_left {\n\t\t\t0% {\n\t\t\t\topacity: 0;\n\t\t\t\ttransform: scale(0, 0);\n\t\t\t\ttransform-origin: bottom left\n\t\t\t}\n\n\t\t\t50% {\n\t\t\t\ttransform: scale(1.03, 1.03);\n\t\t\t\ttransform-origin: bottom left\n\t\t\t}\n\n\t\t\t100% {\n\t\t\t\topacity: 1;\n\t\t\t\ttransform: scale(1, 1);\n\t\t\t\ttransform-origin: bottom left\n\t\t\t}\n\t\t}\n\n\t\t@keyframes fb_bounce_out_v2 {\n\t\t\t0% {\n\t\t\t\topacity: 1;\n\t\t\t\ttransform: scale(1, 1);\n\t\t\t\ttransform-origin: bottom right\n\t\t\t}\n\n\t\t\t100% {\n\t\t\t\topacity: 0;\n\t\t\t\ttransform: scale(0, 0);\n\t\t\t\ttransform-origin: bottom right\n\t\t\t}\n\t\t}\n\n\t\t@keyframes fb_bounce_out_from_left {\n\t\t\t0% {\n\t\t\t\topacity: 1;\n\t\t\t\ttransform: scale(1, 1);\n\t\t\t\ttransform-origin: bottom left\n\t\t\t}\n\n\t\t\t100% {\n\t\t\t\topacity: 0;\n\t\t\t\ttransform: scale(0, 0);\n\t\t\t\ttransform-origin: bottom left\n\t\t\t}\n\t\t}\n\n\t\t@keyframes slideInFromBottom {\n\t\t\t0% {\n\t\t\t\topacity: .1;\n\t\t\t\ttransform: translateY(100%)\n\t\t\t}\n\n\t\t\t100% {\n\t\t\t\topacity: 1;\n\t\t\t\ttransform: translateY(0)\n\t\t\t}\n\t\t}\n\n\t\t@keyframes slideInFromBottomDelay {\n\t\t\t0% {\n\t\t\t\topacity: 0;\n\t\t\t\ttransform: translateY(100%)\n\t\t\t}\n\n\t\t\t97% {\n\t\t\t\topacity: 0;\n\t\t\t\ttransform: translateY(100%)\n\t\t\t}\n\n\t\t\t100% {\n\t\t\t\topacity: 1;\n\t\t\t\ttransform: translateY(0)\n\t\t\t}\n\t\t}\n\t"
+            }}
+          />
+        </>
+        <script src="/assets/scripts/libraries.min.js"></script>
+        <script src="/assets/scripts/jquery.parallax.js"></script>
+        <script src="/assets/scripts/extra.js"></script>
+        <script type="module" src="/assets/scripts/imageChat.js"></script>
+      </body>
+    </html>
+  );
+}
