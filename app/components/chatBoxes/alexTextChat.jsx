@@ -63,7 +63,7 @@ export default function AlexTextChat() {
 
       // Initialize the generative AI model
       const llm = new ChatGoogleGenerativeAI({
-        model: "gemini-1.5",
+        model: "gemini-1.5-pro",
         temperature: 0,
         apiKey: apiKey,
         safetySettings: [
