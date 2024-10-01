@@ -56,8 +56,15 @@ export default function MathkidTextChat() {
      * @param {string} setInput - The function to set the input
      * @param {string} setHistory - The function to set the history
      */
-    async function runChat(apiKey) {
+    async function runChat() {
         // Initialize the generative AI model
+        const apiKey = localStorage.getItem("googleGeminiProApiKey");
+
+        if (!apiKey) {
+          console.error("API key not found in localStorage");
+          // throw new Error("API key not found in localStorage");
+          // return;
+        }
         const llm = new ChatGoogleGenerativeAI({
             model: "gemini-1.5-pro",
             temperature: 0,
@@ -109,7 +116,7 @@ export default function MathkidTextChat() {
                 <div class="border border-bluee-300 shadow rounded-xl p-4 bg-white">
                 <div class="animate-pulse flex space-x-4">
                 <div class="rounded-full bg-slate-700 h-10 w-10  p-1">
-                <img class="flex h-8 w-8 rounded-full " src="https://i.imgur.com/ODqFXwb.png">
+                <img class="flex h-8 w-8 rounded-full " src="https://i.imgur.com/m74pNPK.png">
                 </div><div class="flex-1 space-y-6 py-1">
                 <div class="h-2 bg-slate-700 rounded">
                 </div><div class="space-y-3">
@@ -140,7 +147,7 @@ export default function MathkidTextChat() {
             document.querySelector('#promptMessages').insertAdjacentHTML(
                 'beforeend',
                 `<div class="mb-4 flex rounded-xl bg-slate-50 px-2 py-6 light:bg-slate-900 sm:px-4">
-            <img class="mr-2 flex h-8 w-8 rounded-full sm:mr-4" src="https://i.imgur.com/8TcGjnR.png">
+            <img class="mr-2 flex h-8 w-8 rounded-full sm:mr-4" src="https://i.imgur.com/m74pNPK.png">
             <div class="flex max-w-3xl items-center rounded-xl text-left">
             <p id="temp"></p>
             </div>
@@ -164,7 +171,7 @@ export default function MathkidTextChat() {
             document.querySelector('#promptMessages').insertAdjacentHTML(
                 'beforeend',
                 `<div class="mb-4 flex rounded-xl bg-slate-50 px-2 py-6 light:bg-slate-900 sm:px-4">
-            <img class="mr-2 flex h-8 w-8 rounded-full sm:mr-4" src="https://i.imgur.com/8TcGjnR.png">
+            <img class="mr-2 flex h-8 w-8 rounded-full sm:mr-4" src="https://i.imgur.com/m74pNPK.png">
             <div class="flex max-w-3xl items-center rounded-xl text-left">
             <p >An error occured generating this response, maybe a black hole sucked the answer in before it could reach here. :(</p>
             </div>
@@ -199,7 +206,7 @@ export default function MathkidTextChat() {
                     >
                         <img
                             className="mr-2 flex h-8 w-8 rounded-full sm:mr-4"
-                            src="https://i.imgur.com/8TcGjnR.png"
+                            src="https://i.imgur.com/m74pNPK.png"
                         />
 
                         <div className="flex max-w-3xl items-center rounded-xl text-left">
@@ -231,7 +238,7 @@ export default function MathkidTextChat() {
                         <button
                             type="button"
                             id="chat-send"
-                            onClick={() => runChat("AIzaSyD89TMQmKD82zbhJhV-x4DyEdWPnGYX2cE")}
+                            onClick={() => runChat()}
                             className="m-0.5 ml-1 pr-3 pl-3 z-10 rounded-xl bg-blue-700 text-sm font-medium text-slate-200 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 light:bg-blue-600 light:hover:bg-blue-700 light:focus:ring-blue-800 sm:text-base"
                         >
                             Send <span className="sr-only">Send message</span>

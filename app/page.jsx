@@ -8,8 +8,7 @@ export default function Home() {
 
       <Background />
       <HomeContentBox />
-      <Toggle />
-      <Tilt />      
+      {/* <Toggle /> */}
 
       <footer></footer>
     </div>

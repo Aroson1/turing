@@ -155,7 +155,7 @@ export default function TextChat() {
                 <div class="border border-bluee-300 shadow rounded-xl p-4 bg-white">
                 <div class="animate-pulse flex space-x-4">
                 <div class="rounded-full bg-slate-700 h-10 w-10  p-1">
-                <img class="flex h-8 w-8 rounded-full " src="https://i.imgur.com/ODqFXwb.png">
+                <img class="flex h-8 w-8 rounded-full " src="https://i.imgur.com/m74pNPK.png">
                 </div><div class="flex-1 space-y-6 py-1">
                 <div class="h-2 bg-slate-700 rounded">
                 </div><div class="space-y-3">
@@ -185,7 +185,7 @@ export default function TextChat() {
       document.querySelector("#promptMessages").insertAdjacentHTML(
         "beforeend",
         `<div class="mb-4 flex rounded-xl bg-slate-50 px-2 py-6 light:bg-slate-900 sm:px-4">
-            <img class="mr-2 flex h-8 w-8 rounded-full sm:mr-4" src="https://i.imgur.com/8TcGjnR.png">
+            <img class="mr-2 flex h-8 w-8 rounded-full sm:mr-4" src="https://i.imgur.com/m74pNPK.png">
             <div class="flex max-w-3xl items-center rounded-xl text-left">
             <p id="temp"></p>
             </div>
@@ -217,7 +217,7 @@ export default function TextChat() {
       document.querySelector("#promptMessages").insertAdjacentHTML(
         "beforeend",
         `<div class="mb-4 flex rounded-xl bg-slate-50 px-2 py-6 light:bg-slate-900 sm:px-4">
-            <img class="mr-2 flex h-8 w-8 rounded-full sm:mr-4" src="https://i.imgur.com/8TcGjnR.png">
+            <img class="mr-2 flex h-8 w-8 rounded-full sm:mr-4" src="https://i.imgur.com/m74pNPK.png">
             <div class="flex max-w-3xl items-center rounded-xl text-left">
             <p >An error occured generating this response, maybe a black hole sucked the answer in before it could reach here. :(</p>
             </div>
@@ -247,7 +247,7 @@ export default function TextChat() {
           <div className="mb-4 flex rounded-xl bg-slate-50 px-2 py-6 light:bg-slate-900 sm:px-4">
             <img
               className="mr-2 flex h-8 w-8 rounded-full sm:mr-4"
-              src="https://i.imgur.com/8TcGjnR.png"
+              src="https://i.imgur.com/m74pNPK.png"
             />
 
             <div className="flex max-w-3xl items-center rounded-xl text-left">

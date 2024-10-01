@@ -44,7 +44,7 @@ const InfoBox = () => {
       </p>
       {apiKey && !isEditing ? (
         <div>
-          <p>You have already added the API key.</p>
+          <p>You have added the API key.</p>
           <div
             class="rounded bg-slate-800 py-1 px-2.5 border border-transparent text-center text-sm text-white transition-all shadow-sm hover:shadow focus:bg-slate-700 focus:shadow-none active:bg-slate-700 hover:bg-slate-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
             type="button"

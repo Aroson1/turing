@@ -20,7 +20,6 @@ export default function Home() {
       <Background />
       <ChallengeContentBox challenege={id} />
       <Toggle />
-      <Tilt />
 
       <footer></footer>
     </div>

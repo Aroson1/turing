@@ -11,7 +11,7 @@ import ChatButtons from './buttons/chatButtons';
 
 export default function HomeContentBox() {
     return (
-        <section id="about" className="wrapper about accelerate hide">
+        <section id="about" className="wrapper about accelerate">
             <div className="cell accelerate">
                 <div className="cables center accelerate">
                     <div className="panel accelerate">
