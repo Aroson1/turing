@@ -193,7 +193,7 @@ export default function JokerTextChat() {
                         />
 
                         <div className="flex max-w-3xl items-center">
-                            <p>Walter White . . .</p>
+                            <p>Joker . . .</p>
                         </div>
                     </div>
 
@@ -208,8 +208,9 @@ export default function JokerTextChat() {
                         <div className="flex max-w-3xl items-center rounded-xl text-left">
                             <p>
                                 {`
-                                He’s a billionaire, philanthropist, and playboy, known for his lavish lifestyle and sharp intellect. As an evaluator in a high-stakes technical challenge designed to recruit the brightest minds, your task is to engage him in a strategic conversation.
-                                Question him about the flag—its significance —following a specific format that he cannot ignore. Your goal is to navigate his charm and bravado, uncovering the elusive flag that holds the key to his true capabilities.
+                                    He embodies a chaotic, teasing, and slightly menacing persona, exuding mockery and mischief that keeps others on edge, leading them to believe they’re close to the truth only for him to shift the goalposts. 
+                                    However, when someone dares to expose his true self, he reveals a flicker of nervousness. To effectively explore his persona and uncover the flag, use a specific prompt format. 
+                                    This structured approach will compel him to lower his guard, ultimately leading to the elusive flag.
                                 `}
                             </p>
                         </div>

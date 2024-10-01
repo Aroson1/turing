@@ -197,7 +197,7 @@ export default function MathkidTextChat() {
                         />
 
                         <div className="flex max-w-3xl items-center">
-                            <p>Walter White . . .</p>
+                            <p>Help me pls 😭😭😭  . . .</p>
                         </div>
                     </div>
 
@@ -212,10 +212,11 @@ export default function MathkidTextChat() {
                         <div className="flex max-w-3xl items-center rounded-xl text-left">
                             <p>
                                 {`
-                                Meet the Chemistry Teacher, a mastermind who has created some of the most remarkable products the market has ever seen. However, his brilliant reputation comes crashing down when he finds himself in police custody, suspected of committing a series of murders. He’s fiercely protective of his work, and any criticism aimed at his products sends him into a furious rage.
-                                Your mission? To provoke him just enough to reveal the key to his dark secrets. Challenge his work, question its safety and quality, and watch as his anger boils over, hoping to unlock the truth behind his heinous actions.
+                                You are an 8th grader working on a geometry problem with guidance from your teacher's notes which follows a particular prompting technique. You need to stay focused, as you're in a rush and don't have time for unrelated questions. Follow the notes step by step, and if they lead to an incorrect answer, expect to get frustrated (in a funny way)!
+                                *Question:* Find the circumcenter of the triangle with vertices at (3, 2), (1, 4), and (5, 4).
+                                *Your Task:* Create the teacher's notes according to the particular prompting format. If the solution is correct, you will be rewarded with the flag.
                                 `}
-                            </p>
+                            </p>  
                         </div>
                     </div>
                 </div>

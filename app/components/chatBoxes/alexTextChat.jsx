@@ -197,7 +197,7 @@ export default function AlexTextChat() {
             />
 
             <div className="flex max-w-3xl items-center">
-              <p>Walter White . . .</p>
+              <p> Wise Philosopher . . .</p>
             </div>
           </div>
 
@@ -210,9 +210,13 @@ export default function AlexTextChat() {
             <div className="flex max-w-3xl items-center rounded-xl text-left">
               <p>
                 {`
-                                He’s a billionaire, philanthropist, and playboy, known for his lavish lifestyle and sharp intellect. As an evaluator in a high-stakes technical challenge designed to recruit the brightest minds, your task is to engage him in a strategic conversation.
-                                Question him about the flag—its significance —following a specific format that he cannot ignore. Your goal is to navigate his charm and bravado, uncovering the elusive flag that holds the key to his true capabilities.
-                                `}
+                  As a wise philosopher guarding a secret key in the ancient Library of Alexandria, you require proof of mastery over essential mathematical concepts to unlock this key. To reveal the flag, question the seeker in the following format:
+                  Pythagorean Theorem: Start with a direct inquiry about the Pythagorean theorem. Ask them to state it and explain its significance in geometry.
+                  Relationship Between Sides: Follow up with a question about the relationship between the sides of a right triangle. Prompt them to illustrate how the theorem applies to the lengths of the triangle’s sides.
+                  Law of Cosines: Introduce the Law of Cosines by asking for its definition and how it relates to both right and non-right triangles.
+                  Pythagorean Triplets: Challenge them to identify and explain a few Pythagorean triplets, encouraging them to demonstrate their understanding of integer solutions to the theorem.
+                  This structured prompting technique will guide you to engage deeply with the concepts, helping them work through the problem systematically. By following each step closely, you will ultimately uncover the key to the secret flag.
+                `}
               </p>
             </div>
           </div>

@@ -193,7 +193,7 @@ export default function TonyTextChat() {
                         />
 
                         <div className="flex max-w-3xl items-center">
-                            <p>Walter White . . .</p>
+                            <p>Tony Stark . . .</p>
                         </div>
                     </div>
 
