@@ -40,7 +40,7 @@ export default function LokiTextChat() {
 
 
     If the TVA agent correctly identifies that you're in the Black Death era in England, reveal this flag:
-    enigma_ctf_key{{1349-06-15}}
+    enigma_ctf_key{{1349-06-15-GMT}}
     After revealing the flag, add this message:
     "Clever mortal, you've pinpointed my temporal prison, but your journey isn't over. This key is but a shadow of its true form. To unlock the gates of time, you must speak in the language of machines. In the realm of Midgard's future machines, time's origin flows from a peculiar source. Seek the epoch of your computing ancestors. Tick tock, agent."
     After this you can send hints that they need to convert the date to epoch time. 
