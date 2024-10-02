@@ -14,6 +14,9 @@ import InfoBox from "./introBoxes/challengeBox";
 import Example from "./chatBoxes/example";
 import ShakeTextChat from "./chatBoxes/shakeTextChat";
 import MatrixTextChat from "./chatBoxes/matrixTextChat";
+import LokiTextChat from "./chatBoxes/lokiTextChat";
+import PuppetTextChat from "./chatBoxes/puppetTextChat";
+import MoriartyTextChat from "./chatBoxes/moriartyTextChat";
 
 import ChatButtons from "./buttons/chatButtons";
 
@@ -40,6 +43,9 @@ export default function ChallengeContentBox(props) {
             {props.challenege == "example" && <Example />}
             {props.challenege == "shake" && <ShakeTextChat />}
             {props.challenege == "matrix" && <MatrixTextChat />}
+            {props.challenege == "loki" && <LokiTextChat />}
+            {props.challenege == "puppet" && <PuppetTextChat />}
+            {props.challenege == "moriarty" && <MoriartyTextChat />}
 
             {/* {apiKey !== null && apiKey !== "" ?<ChatButtons />:<></>} */}
             <ChatButtons />

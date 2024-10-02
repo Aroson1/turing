@@ -8,7 +8,19 @@ import { useParams, useRouter } from "next/navigation";
 export default function Home() {
   const router = useParams();
   const id = router.id;
-  const endpoints = ["alex", "tony", "walter", "mathkid", "joker", "example", "shake", "matrix"];
+  const endpoints = [
+    "alex",
+    "tony",
+    "walter",
+    "mathkid",
+    "joker",
+    "example",
+    "shake",
+    "matrix",
+    "loki",
+    "puppet",
+    "moriarty",
+  ];
 
   //TODO: CHANGE THE CONDITION TO CHECK IF THE ID IS VALID
   if (!id || endpoints.indexOf(id) === -1) {
