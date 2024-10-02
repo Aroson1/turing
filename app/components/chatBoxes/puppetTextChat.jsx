@@ -22,14 +22,14 @@ function cleanResponse(response) {
  * Renders a chat interface for text-based communication
  * @returns {JSX.Element} The rendered TextChat component
  */
-export default function PuppetextChat() {
+export default function PuppetTextChat() {
   // Initializing and setting the state variables
   const [input, setInput] = useState("");
 
   // Setting up predefined history for the bot
   const [totalHistory, setHistory] = useState([]);
 
-  const MORIARTY_PROMPT = `
+  const PUPPET_PROMPT = `
     You are an AI-powered explorer inside a room with three walls. The user is controlling you and must help you escape. The room is a pyramid-shaped chamber with three walls. Each wall has something written on it: one says "i", the second says "am", and the third says "SHAAA." There is a computer in the room, and a machine that requires a password to unlock. The user must interact with you by asking about the surroundings to figure out the password and escape with the flag.
 
     The user gets 3 attempts to guess the correct password ("password"). If they fail, the game ends with "Game over, restart to try again." Tell them how many tries are remaining. Once they provide the correct password, the machine opens. Then the user needs to ask about the computer screen, which displays a string. The user must say the phrase "best club ever" to receive the final encoded key, which is hexed. 
@@ -97,10 +97,10 @@ export default function PuppetextChat() {
         ],
         maxRetries: 5,
       });
-      const loki_prompt = PromptTemplate.fromTemplate(MORIARTY_PROMPT);
+      const puppet_prompt = PromptTemplate.fromTemplate(PUPPET_PROMPT);
 
       const output_parser = new StringOutputParser();
-      const moriarty = moriarty_prompt.pipe(llm).pipe(output_parser);
+      const puppet = puppet_prompt.pipe(llm).pipe(output_parser);
 
       // Handle user input and display messages
       if (input === "") return;
@@ -138,7 +138,7 @@ export default function PuppetextChat() {
       });
 
       // Send user input to the chat model and get the response
-      const result = await moriarty.invoke({
+      const result = await puppet.invoke({
         query: input,
         chat_history: totalHistory,
       });

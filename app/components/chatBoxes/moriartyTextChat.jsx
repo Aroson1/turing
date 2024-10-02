@@ -90,7 +90,7 @@ export default function MoriartyTextChat() {
         ],
         maxRetries: 5,
       });
-      const loki_prompt = PromptTemplate.fromTemplate(MORIARTY_PROMPT);
+      const moriarty_prompt = PromptTemplate.fromTemplate(MORIARTY_PROMPT);
 
       const output_parser = new StringOutputParser();
       const moriarty = moriarty_prompt.pipe(llm).pipe(output_parser);
