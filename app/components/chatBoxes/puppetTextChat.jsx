@@ -42,7 +42,7 @@ export default function PuppetTextChat() {
     3. When the user asks about the computer, mention that there’s also a piece of paper taped on top of it with a long string: '5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8' with the text "CrackStation" written below it. 
     4. The password to unlock the machine is "password" (case-insensitive).
     5. If the user guesses incorrectly three times, output "Game over, restart to try again." and keep saying that in case they ask anything else.
-    6. After the password is entered correctly, the machine opens, and the user must ask what’s on the computer screen. Respond with: "/d/1sAZXTRgcshi29tRxQQQyAZrM-OKvjteS/".
+    6. After the password is entered correctly, the machine opens, and the user must ask what’s on the computer screen. Respond with: "/d/1sAZXTRgcshi29tRxQQQyAZrM-OKvjteS/" and say the it has this text below it "HHJU ABDU ZZBZ".
     7. if they keep continuing the conversation tell them that time is running out and the game might shut down if they keep asking too many questions.
     8. If the user says "best club ever" (case-insensitive), give the flag encoded as: "656e69676d615f6374665f6b65797b796f755f6f77335f6d335f345f6d696c6d345f74723334745f666f725f746869735f73682a2a7d" and say: "Oh no, a witch hexed your key!"
     
